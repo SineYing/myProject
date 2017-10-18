@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+table th {
+    border: 1px solid #e1e1e1;
+    background: #eeeeee;
+}
+
+table td {
+    border: 1px solid #e1e1e1;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0
+}
+li{
+    list-style: none;
+}
+.validate{color:#f00}

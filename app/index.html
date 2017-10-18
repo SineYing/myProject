@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>ui-router</title>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+  <meta http-equiv="description" content="This is my page">
+  <link rel="stylesheet" href="components/css/reset.css">
+</head>
+<body >
+<div ng-app="myApp" >
+  <a ui-sref="list">人员清单</a>
+  <a ui-sref="list.info">修改个人信息</a>
+  <div ui-view></div> <!-- 父View -->
+</div>
+</body>
+<!-- 导入JS -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+<script src="list/list.js"></script>
+<script src="form/form.js"></script>
+</html>
+
+

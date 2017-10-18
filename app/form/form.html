@@ -1,0 +1,50 @@
+<div ng-controller="FormCtrl">
+    <new-div></new-div>
+    <form name="myForm" novalidate>
+        <ul>
+
+            <li><label>名</label>
+                <!--姓名正則-->
+                <div><input type="text" name="fName" ng-model="user.fName" required>
+                    <span class="validate" ng-show="myForm.fName.$dirty && myForm.fName.$invalid">
+                                    <span ng-show="myForm.fName.$error.required">名是必须填写的。</span>
+                                </span>
+                </div>
+            </li>
+            <li><label>姓</label>
+                <div><input type="text" name="lName" ng-model="user.lName"></div>
+            </li>
+            <li><label>年龄 </label>
+                <div><input type="number" name="ages" ng-model="user.ages" min="0"></div>
+            </li>
+            <li><label>性别</label>
+                <div><input type="radio" name="sex" value="man" ng-model="user.sex">男
+                    <input type="radio" name="sex" value="woman" ng-model="user.sex">女
+                </div>
+            </li>
+            <li><label>爱好</label>
+                <div><input type="checkbox" name="hobby" ng-true-value="true" ng-false-value="false"
+                            ng-model="user.hobby.sing">唱歌
+                    <input type="checkbox" name="hobby" ng-true-value="true" ng-false-value="false"
+                           ng-model="user.hobby.book">看书
+                </div>
+            </li>
+            <li><label>城市 </label>
+                <div><select ng-model="user.city" ng-options="x for x in citys" name="city"></select></div>
+            </li>
+            <li><label>郵箱</label>
+                <div><input type="email" name="email"></div>
+            </li>
+            <li class="btn">
+                <button type="submit">提交</button>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <!--ng-model双向数据绑定<br/>-->
+                <!--双大括号是数据绑定<br/>-->
+                {{user}}<br/>
+            </li>
+        </ul>
+    </form>
+</div>
